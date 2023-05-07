@@ -3,11 +3,11 @@
     buttonSelector - селектор для кнопки зміни режиму
     light - клас світлої теми
     dark - клас темної теми
-    
+    default - тема за замовчуванням
 */
 
 
-export default function lightModeModule({buttonSelector , light='light' , dark='dark' }){
+export default function lightModeModule({buttonSelector , light='light' , dark='dark' , default=true}){
     function setLightMode(mode){
         if(mode){
             document.body.classList.remove(dark);
@@ -21,7 +21,7 @@ export default function lightModeModule({buttonSelector , light='light' , dark='
         }
     }
     if(window.localStorage.getItem("LightMode") == null){
-        setLightMode(true);
+        setLightMode(default);
     }else
     {
         setLightMode(window.localStorage.getItem("LightMode") == "true" );
