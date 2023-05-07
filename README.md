@@ -31,4 +31,4 @@ body{
 - **buttonSelector** - selector for button to change the color scheme of the site
 - **light** - class that is added to body for light theme (default : light)
 - **dark** - class that is added to body for dark theme (default : dark)
-- **default** - default theme (true - light , false - dark ) (default : true )
+- **startMode** - default theme (true - light , false - dark ) (default : true )
